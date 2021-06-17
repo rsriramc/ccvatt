@@ -1,0 +1,200 @@
+.mainSection {
+    padding: 10px 5px;
+}
+
+.mainContent {
+    display: flex;
+}
+
+.leftContent {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 56px);
+    overflow-y: scroll;
+}
+
+.notificationBar {
+    height: calc(100vh - 56px);
+    overflow-y: scroll;
+    width: 35%;
+    max-width: 400px;
+    border-left: 1px solid grey;
+    text-align: center;
+}
+
+#vaccineLogo {
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.checkBoxAge {
+    margin-left: 15px;
+}
+
+.notifHead {
+    padding: 10px;
+    font-size: 20px;
+    background-color: #404447;
+    color: white;
+    text-align: center;
+}
+
+.noteContent {
+    color: grey;
+    padding: 5px;
+}
+
+.notifTime {
+    background-color: #404447;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px 7px;
+    border-radius: 10px;
+}
+
+.notifLine {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    margin: 4px 12px;
+    border-radius: 10px;
+}
+
+.loss {
+    background-color: rgb(250, 186, 186);
+}
+
+.gain {
+    background-color: rgb(187, 255, 187);
+}
+
+.new {
+    background-color: rgb(165, 210, 253);
+}
+
+.brandNew {
+    background-color: rgb(253, 165, 246);
+}
+
+.netStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin: 10px;
+}
+
+.conStatus {
+    text-align: center;
+}
+
+.connectionDetails {
+    border: 2px solid black;
+    width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    flex-grow: 0;
+}
+
+h2 {
+    border-radius: 5px;
+}
+
+.pincodeInputTray {
+    padding-top: 5px;
+}
+
+#noContentNotif {
+    display: inline-block;
+    padding: 20px 40px;
+    margin: 20px auto;
+    border: 2px groove rgb(5, 25, 39);
+    border-radius: 20px;
+}
+
+.divibl {
+    display: inline-block;
+}
+
+.doseDisplay {
+    margin: 4px 0;
+}
+
+.netStatus .light {
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 100px;
+    margin: 0 5px;
+}
+
+.footer {
+    font-size: 50%;
+    flex-grow: 0;
+}
+
+.page-footer {
+    background-color: #404447;
+    color: white;
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* width: 100%; */
+}
+
+.result {
+    padding: 10px;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.sessionName {
+    background-color: grey;
+    color: white;
+    font-size: 18px;
+    padding: 4px;
+    margin: 3px;
+    margin-top: 40px;
+}
+
+.pincodeName {
+    background-color: rgb(70, 70, 70);
+    color: white;
+    font-size: 16px;
+    padding: 7px 8px;
+    margin: 3px 10px;
+    margin-top: 20px;
+}
+
+b {
+    text-decoration: underline;
+}
+
+.centerName {
+    background-color: rgb(165, 165, 165);
+    color: rgb(248, 248, 248);
+    font-size: 16px;
+    padding: 10px;
+    margin: 3px 20px;
+    margin-top: 20px;
+}
+
+.stampName {
+    background-color: rgb(221, 221, 221);
+    color: rgb(61, 61, 61);
+    font-size: 16px;
+    padding: 4px;
+    margin: 3px 30px;
+}
+
+.small {
+    font-size: 70%;
+    font-weight: bolder;
+    color: rgb(0, 255, 13);
+}
+
+.custom-control {
+    display: inline-block;
+    vertical-align: middle;
+}

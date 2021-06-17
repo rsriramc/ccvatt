@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CCVATT | Co-WIN Covid Vaccine Availability Tracker</title>
+        <link rel="icon" type="image" href="logo.png" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img
+                    src="./logo.png"
+                    width="30"
+                    height="30"
+                    class="d-inline-block align-top"
+                    id="vaccineLogo"
+                    alt=""
+                />
+                CCVATT | Co-WIN Covid-19 Vaccine Availability Timeline Tracker
+            </a>
+        </nav>
+        <div class="mainContent">
+            <div class="leftContent">
+                <div class="connectionDetails">
+                    <div class="netStatus">
+                        <div class="divibl msg">
+                            Connection Status to cowin.gov.in:
+                        </div>
+                        <div class="light divibl"></div>
+                    </div>
+                    <div class="pincodeInputTray">
+                        <label for="track_pins"> Pincodes to track : </label>
+                        <input
+                            type="text"
+                            id="track_pins"
+                            name="track_pins"
+                            value=""
+                        />
+                    </div>
+                    <div class="pincodeInputTray">
+                        <label for="notify_pins"> Pincodes to notify: </label>
+                        <input
+                            type="text"
+                            id="notify_pins"
+                            name="notify_pins"
+                        />
+                    </div>
+                    <div class="noteContent">
+                        Only first three pincodes will be considered.
+                    </div>
+                    <div class="pincodeInputTray">
+                        <label for="track_date"> Date to track: </label>
+                        <input type="date" id="track_date" name="track_date" />
+                    </div>
+                    <div>
+                        Centers to notify:
+                        <input
+                            class="checkBoxAge"
+                            type="checkbox"
+                            checked
+                            value=""
+                            id="age18"
+                        />
+                        <label for="age18"> 18+ </label>
+                        <input
+                            class="checkBoxAge"
+                            type="checkbox"
+                            value=""
+                            id="age45"
+                        />
+                        <label for="age45"> 45+ </label>
+                    </div>
+                    <button
+                        type="button"
+                        class="btn btn-dark"
+                        id="btnUpdtSearch"
+                    >
+                        Start Tracking
+                    </button>
+
+                    <div class="conStatus" id="conStatus" style="display: none">
+                        <div>
+                            Connection Start Time:<b class="sessionStart"> </b>
+                        </div>
+                        <div>
+                            Requests sent in this session :
+                            <b class="requestCount">0</b>.
+                        </div>
+                        <div class="trackPins">
+                            Pincodes tracking : <b id="pins"> </b>
+                        </div>
+                        <div class="trackPins">
+                            Pincodes notifying : <b id="notif_pins"> </b>
+                        </div>
+                        <div class="noteContent">
+                            Note that the first request will be sent, 1 minute
+                            after the connection establishment.
+                        </div>
+                    </div>
+                    <div class="doseDisplay">
+                        Display results : Dose 1
+                        <span class="custom-control custom-switch">
+                            <input
+                                type="checkbox"
+                                class="custom-control-input"
+                                id="dose2"
+                            />
+                            <label
+                                class="custom-control-label"
+                                for="dose2"
+                            ></label>
+                        </span>
+                        Dose 2
+                    </div>
+                </div>
+
+                <div class="result accordion" id="result"></div>
+
+                <footer class="page-footer font-small blue">
+                    <div class="footer-copyright text-center py-3">
+                        &copy; 2021 Copyright:
+                        <a href="https://www.github.com/ravisrc" target="_blank">
+                            Ravi Sri Ram Chowdary</a
+                        >
+                    </div>
+                </footer>
+            </div>
+            <div class="notificationBar">
+                <h3 class="notifHead">Notifications</h3>
+                <button class="btn btn-info" id="clearNotif">Clear</button>
+                <div class="notifContent" id="notifContent"></div>
+                <div id="noContentNotif">No new notifications</div>
+            </div>
+        </div>
+
+        <script src="render.js"></script>
+    </body>
+</html>
